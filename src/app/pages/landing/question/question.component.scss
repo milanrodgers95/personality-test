@@ -1,0 +1,20 @@
+.question-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .question {
+    font-style: italic;
+  }
+  .answer {
+    margin: 10px 0;
+  }
+  .footer {
+    .btn-pre {
+      margin-right: 20px;
+    }
+  }
+}

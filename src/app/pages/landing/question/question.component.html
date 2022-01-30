@@ -1,0 +1,48 @@
+<div class="question-wrapper">
+  <div class="title">
+    QUESTION {{ currentIndex + 1 }} OF {{ totalQuestion }}
+  </div>
+  <div class="question">{{ question.question }}</div>
+  <div class="answer">
+    <div
+      class="form-check"
+      *ngFor="let item of question.answers; let i = index"
+    >
+      <input
+        class="form-check-input"
+        type="radio"
+        name="answer"
+        [checked]="item.selected"
+        [value]="i"
+        (change)="onSelectionChange(item)"
+      />
+      <label class="form-check-label"> {{ item.name }} </label>
+    </div>
+  </div>
+  <div class="footer">
+    <button
+      type="button"
+      class="btn btn-light btn-pre"
+      *ngIf="currentIndex !== 0"
+      (click)="previousQuestion()"
+    >
+      Previous
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger btn-next"
+      *ngIf="currentIndex < totalQuestion - 1"
+      (click)="nextQuestion()"
+    >
+      Next
+    </button>
+    <button
+      type="button"
+      class="btn btn-success btn-next"
+      *ngIf="currentIndex === totalQuestion - 1"
+      (click)="finish()"
+    >
+      Finish
+    </button>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.evaluation-wrapper {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  text-align: center;
+  .card-img {
+    width: 200px;
+  }
+  .card-title {
+    margin: 20px 0;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}

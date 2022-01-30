@@ -1,0 +1,29 @@
+<div class="row content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="progress" *ngIf="!isFinish">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            [ngStyle]="{ 'width.%': currentProgress }"
+            [attr.aria-valuenow]="currentProgress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            {{ currentProgress }}%
+          </div>
+        </div>
+      </div>
+      <app-question
+        *ngIf="!isFinish"
+        [question]="currentQuestion"
+        [totalQuestion]="questions.length"
+        [currentIndex]="currentIndex"
+        (questionChange)="questionChange($event)"
+        (finishTesting)="finishTesting()"
+      ></app-question>
+      <app-evaluation *ngIf="isFinish" [averageScore]="averageScore"></app-evaluation>
+    </div>
+  </div>
+</div>

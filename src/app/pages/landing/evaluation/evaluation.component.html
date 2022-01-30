@@ -1,0 +1,12 @@
+<div class="evaluation-wrapper">
+  <div class="card-body" *ngIf="introvert">
+    <img src="/assets/images/introvert.jpeg" class="card-img" />
+    <h5 class="card-title">You are more of a public introvert</h5>
+  </div>
+
+  <div class="card-body" *ngIf="!introvert">
+    <img src="/assets/images/extrovert.jpg" class="card-img" />
+    <h5 class="card-title">You are more of a public extrovert</h5>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="back()">Back</button>
+</div>
