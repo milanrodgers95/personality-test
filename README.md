@@ -26,5 +26,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-![Video record](https://raw.githubusercontent.com/milanrodgers95/personality-test/master/PersonalityTest.gif?token=GHSAT0AAAAAABQ6ELDUADGCZLM2JT6UNLWUYPW3SEA)
+![Video record](https://raw.githubusercontent.com/milanrodgers95/personality-test/master/PersonalityTest.gif)
 
